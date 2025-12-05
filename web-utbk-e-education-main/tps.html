@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portal Latihan UTBK</title>
+
+  <style>
+    :root {
+      --primary: #1e40af; /* biru UTBK */
+      --primary-light: #3b82f6;
+      --bg: #f1f5f9;
+      --text: #0f172a;
+      --muted: #64748b;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    /* NAVBAR */
+    header {
+      background: var(--primary);
+      color: white;
+      padding: 16px 0;
+      box-shadow: 0 2px 5px rgba(0,0,0,.1);
+    }
+    .nav-container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 0 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 18px;
+      font-weight: 600;
+    }
+    nav a:hover {
+      color: var(--primary-light);
+    }
+
+    /* CONTENT */
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px 16px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 3px 6px rgba(0,0,0,.06);
+      margin-bottom: 20px;
+    }
+
+    h2 { margin-top: 0; }
+
+    /* QUIZ */
+    .quiz-question {
+      padding-bottom: 12px;
+      border-bottom: 1px dashed #e2e8f0;
+      margin-bottom: 20px;
+    }
+    .options label {
+      display: block;
+      padding: 8px;
+      border: 1px solid #e2e8f0;
+      border-radius: 6px;
+      margin: 6px 0;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    .options img {
+      width: 70px;
+      height: auto;
+    }
+    .options label:hover {
+      background: #f0f6ff;
+      border-color: var(--primary);
+    }
+    .options input { margin-right: 6px; }
+
+    /* BUTTON */
+    .btn {
+      padding: 10px 16px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      background: var(--primary);
+      color: white;
+      font-weight: 600;
+      margin-top: 10px;
+    }
+    .btn-secondary {
+      background: #475569;
+      margin-left: 8px;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 20px;
+      margin-top: 20px;
+      color: var(--muted);
+    }
+
+    .score {
+      font-size: 20px;
+      font-weight: bold;
+      color: #065f46;
+    }
+
+    .explain {
+      background: #f1f5f9;
+      padding: 12px;
+      border-radius: 8px;
+      margin-top: 12px;
+    }
+
+    .answer-question img {
+      width: 70px;
+      height: auto; /* Agar gambar proporsional (tidak gepeng) */
+}
+    
+    /* Utility for Math display */
+    .math-eq {
+        font-family: 'Times New Roman', Times, serif;
+        font-style: italic;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="nav-container">
+      <h2 style="margin:0;">Portal UTBK</h2>
+      <nav>
+        <a href="index.html">Home</a>
+      </nav>
+    </div>
+  </header>
+
+  <section id="tes" class="container">
+    <div class="card">
+      <h2>TES POTENSI SKOLASTIK</h2>
+
+      <p class="muted">Jawab semua soal lalu klik <b>Periksa Jawaban</b>.</p>
+
+      <form id="quizForm">
+
+        <!-- Soal No 1-5 -->
+        <div class="quiz-question">
+          <h3>1. Pola Bilangan</h3>
+          <p>Diketahui <span class="math-eq">U<sub>n</sub></span> merupakan suku ke-n dari suatu barisan geometri dengan tiga suku pertamanya berturut-turut adalah <span class="math-eq">(p + 3), (p - 2), (p - 8)</span>. Suku kelima dari barisan tersebut adalah ….</p>
+          <div class="options">
+            <label><input type="radio" name="q1" value="A"> A. <img src="assets/images/TPS Soal 1_Pilihan A.jpg" alt="-7.776 / 125" ></label>
+            <label><input type="radio" name="q1" value="B"> B. <img src="assets/images/TPS Soal 1_Pilihan B.jpg" alt="-1.296 / 25" width="70px"></label>
+            <label><input type="radio" name="q1" value="C"> C. <img src="assets/images/TPS Soal 1_Pilihan C.jpg" alt="1.296 / 25" width="70px"></label>
+            <label><input type="radio" name="q1" value="D"> D. <img src="assets/images/TPS Soal 1_Pilihan D.jpg" alt="7.776 / 125" width="70px"></label>
+            <label><input type="radio" name="q1" value="E"> E. <img src="assets/images/TPS Soal 1_Pilihan E.jpg" alt="7.776 / 25" width="70px"></label>
+          </div>
+        </div>
+
+        <!-- Soal No 2 -->
+        <div class="quiz-question">
+          <h3>2. Aljabar dan Fungsi (Persamaan Garis)</h3>
+          <p>Diketahui persamaan garis <i>g</i> adalah <span class="math-eq">(2x - y) + p(x + y) = p</span> dan persamaan garis <i>h</i> adalah <span class="math-eq">(x - 4y) + 2p(x + y) = 3p</span>. Jika garis <i>g</i> dan garis <i>h</i> saling sejajar, nilai dari <span class="math-eq">-2p</span> adalah ….</p>
+          <div class="options">
+            <label><input type="radio" name="q2" value="A"> A. 14</label>
+            <label><input type="radio" name="q2" value="B"> B. 7</label>
+            <label><input type="radio" name="q2" value="C"> C. -7</label>
+            <label><input type="radio" name="q2" value="D"> D. -14</label>
+            <label><input type="radio" name="q2" value="E"> E. -16</label>
+          </div>
+        </div>
+
+        <!-- Soal No 3 -->
+        <div class="quiz-question">
+          <h3>3. Geometri (Bangun Datar)</h3>
+          <p>Perhatikan gambar berikut!</p>
+          <p><img src="assets/images/TPS Soal 3.jpg" alt="" width="180px"></p>
+          <p>Luas dan keliling segi empat ABCD berturut-turut adalah <i>p</i> satuan luas dan <i>q</i> satuan panjang dengan <i>p : q = 3 : 1</i>. Diketahui perbandingan sisi <span class="math-eq">CD : BC : AB = 1 : 2 : 3</span>.</p>
+          <p>Panjang sisi <span class="math-eq">CD</span> adalah … satuan panjang.</p>
+          <div class="options">
+            <label><input type="radio" name="q3" value="A"> A. 2/3</label>
+            <label><input type="radio" name="q3" value="B"> B. &radic;6</label>
+            <label><input type="radio" name="q3" value="C"> C. 3</label>
+            <label><input type="radio" name="q3" value="D"> D. 2&radic;3</label>
+            <label><input type="radio" name="q3" value="E"> E. 6</label>
+          </div>
+        </div>
+
+        <!-- Soal No 4 -->
+        <div class="quiz-question">
+          <h3>4. Statistika dan Peluang (Aturan Pencacahan)</h3>
+          <p>Diketahui pada suatu seleksi calon karyawan terdapat 3 orang pria dan 4 orang wanita yang duduk secara melingkar. Dalam seleksi tersebut, mereka wajib mengerjakan 8 soal dari 12 soal tes yang diberikan dan akan dipilih 3 orang yang lolos seleksi sebagai karyawan.</p>
+          <p>Berdasarkan informasi tersebut, manakah di antara pernyataan berikut yang bernilai <b>benar</b>?</p>
+          <ol>
+              <li>Banyak cara duduk calon karyawan tersebut adalah 210 cara.</li>
+              <li>Jika 5 soal pertama wajib dikerjakan, banyak kemungkinan pilihan soal yang dikerjakan dari setiap calon karyawan adalah 120 cara.</li>
+              <li>Banyak kemungkinan variasi peserta yang lolos seleksi adalah 70.</li>
+              <li>Banyak kemungkinan jika seorang pria dan 2 orang wanita yang lolos seleksi adalah 18.</li>
+          </ol>
+          <div class="options">
+            <label><input type="radio" name="q4" value="A"> A. 1, 2, dan 3 SAJA yang benar</label>
+            <label><input type="radio" name="q4" value="B"> B. 1 dan 3 SAJA yang benar</label>
+            <label><input type="radio" name="q4" value="C"> C. 2 dan 4 SAJA yang benar</label>
+            <label><input type="radio" name="q4" value="D"> D. HANYA 4 yang benar</label>
+            <label><input type="radio" name="q4" value="E"> E. SEMUA pilihan benar</label>
+          </div>
+        </div>
+
+        <!-- Soal No 5 -->
+        <div class="quiz-question">
+          <h3>5. Aljabar dan Fungsi</h3>
+          <p>Diberikan sebuah fungsi <span class="math-eq">f(n) = (-1)<sup>n</sup> &radic;((n - 5)<sup>2</sup> + 20n)</span> dengan <i>n</i> merupakan suatu bilangan bulat. Berdasarkan informasi tersebut, manakah di antara pernyataan berikut yang bernilai <b>benar</b>?</p>
+          <ol>
+              <li>Jika n adalah bilangan genap, <span class="math-eq">f(n + n<sup>2</sup>)</span> bernilai ganjil.</li>
+              <li>Jika n adalah bilangan ganjil, <span class="math-eq">f(n) + f(2n)</span> bernilai ganjil.</li>
+              <li><span class="math-eq">f(2.021) + 5 = -f(2.016)</span></li>
+              <li><span class="math-eq">f(2.017) + f(2.018) = 1</span></li>
+          </ol>
+          <div class="options">
+            <label><input type="radio" name="q5" value="A"> A. 1, 2, dan 3 SAJA yang benar</label>
+            <label><input type="radio" name="q5" value="B"> B. 1 dan 3 SAJA yang benar</label>
+            <label><input type="radio" name="q5" value="C"> C. 2 dan 4 SAJA yang benar</label>
+            <label><input type="radio" name="q5" value="D"> D. HANYA 4 yang benar</label>
+            <label><input type="radio" name="q5" value="E"> E. SEMUA pilihan benar</label>
+          </div>
+        </div>
+
+        <button type="button" class="btn" onclick="checkAnswers()">Periksa Jawaban</button>
+        <button type="button" class="btn btn-secondary" onclick="resetQuiz()">Reset</button>
+      </form>
+
+      <div id="result" class="card" style="display:none;margin-top:14px"></div>
+    </div>
+  </section>
+
+  <footer>
+    <small>© 2025 Portal UTBK. Semua Hak Dilindungi.</small>
+  </footer>
+
+  <script>
+    // Kunci Jawaban
+    const answers = { 
+      q1: "B",
+      q2: "D",
+      q3: "E",
+      q4: "D",
+      q5: "E"
+    };
+
+    function checkAnswers() {
+      const form = document.getElementById("quizForm");
+      const resultBox = document.getElementById("result");
+      let score = 0;
+      let total = 5;
+      let missing = [];
+      const data = new FormData(form);
+
+      for (let i = 1; i <= total; i++) {
+        const key = "q" + i;
+        const val = data.get(key);
+        if (!val) missing.push(i);
+        if (val === answers[key]) score++;
+      }
+
+      if (missing.length) {
+        alert("Soal belum dijawab: " + missing.join(", "));
+        return;
+      }
+
+      const percent = Math.round((score / total) * 100);
+      resultBox.style.display = "block";
+      resultBox.innerHTML =
+        `<h3>Hasil: <span class="score">${score}/${total}</span> (${percent}%)</h3>`;
+
+      // Pembahasan Kunci Jawaban
+      const pemb = {
+        q1: 'B. <img src="assets/images/TPS Soal 1_Pilihan B.jpg" alt="-7.776 / 125" style="width: 70px;">',
+        q2: "D. -14",
+        q3: "E. 6",
+        q4: "D. HANYA 4 yang benar",
+        q5: "E. SEMUA pilihan benar"
+      };
+
+      resultBox.innerHTML += `<div class='explain'><h4>Kunci Jawaban</h4>`;
+      for (let i = 1; i <= total; i++) {
+        resultBox.innerHTML += `<p><strong>Soal ${i}:</strong> ${pemb["q"+i]}</p>`;
+      }
+      resultBox.innerHTML += `</div>`;
+    }
+
+    function resetQuiz() {
+      document.getElementById("quizForm").reset();
+      document.getElementById("result").style.display = "none";
+    }
+  </script>
+
+</body>
+</html>
